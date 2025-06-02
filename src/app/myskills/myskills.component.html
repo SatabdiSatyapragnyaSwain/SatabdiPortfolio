@@ -1,0 +1,29 @@
+<div class="container-fluid mySkills" #mySkills>
+    <div class="container">
+        <h2 class="skill-title">My Skills</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="skill-box" *ngFor="let skill of skills.slice(0, 8); let i = index">
+                    <div class="skill-name">{{ skill.name }}</div>
+                    <div class="progress-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" [style.--progress-width]="skill.percentage + '%'" [style.animation-delay]="(i * 0.2) + 's'"></div>
+                        </div>
+                        <div class="progress-circle">{{ skill.percentage }}%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="skill-box" *ngFor="let skill of skills.slice(8); let i = index">
+                    <div class="skill-name">{{ skill.name }}</div>
+                    <div class="progress-wrapper">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" [style.--progress-width]="skill.percentage + '%'" [style.animation-delay]="((i + 7) * 0.2) + 's'"></div>
+                        </div>
+                        <div class="progress-circle">{{ skill.percentage }}%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

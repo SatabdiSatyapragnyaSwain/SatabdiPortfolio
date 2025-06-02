@@ -1,0 +1,60 @@
+.myProjects {
+    background-color: black;
+    padding: 60px 30px;
+    user-select: none;
+    color: white;
+}
+
+.card {
+    /* background: linear-gradient(90deg, #885600, #837100); */
+    /* background: linear-gradient(90deg, #027175, #00a29f); */
+    background-color: black;
+    border-radius: 20px;
+    padding: 30px;
+    color: white;
+    box-shadow: 0 0 30px #ffdd00;
+    transition: transform 0.3s ease;
+}
+
+.cardMain {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.cardMain p {
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+.cardMain h2 {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.card > div:last-child p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .cardMain {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .cardMain p {
+        font-size: 4rem;
+    }
+
+    .cardMain h2 {
+        font-size: 1.5rem;
+    }
+}
