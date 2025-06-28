@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 export const routes: Routes = [
-  { path: 'Dashboard', component: DashboardComponent},
-  { path: '', redirectTo: '/Dashboard', pathMatch: 'full' },
-  { path: '**', redirectTo: '/Dashboard' }
+  { path: 'Portfolio', component: DashboardComponent},
+  { path: '', redirectTo: '/Portfolio', pathMatch: 'full' },
+  { path: '**', redirectTo: '/Portfolio' }
 ];

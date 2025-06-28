@@ -59,7 +59,7 @@ export class DashboardComponent {
 
   downloadResume(): void {
     const link = document.createElement('a');
-    link.href = '../../assets/SATABDI_SATYAPRAGNYA_SWAIN_resume.pdf';
+    link.href = 'assets/SATABDI_SATYAPRAGNYA_SWAIN_resume.pdf';
     link.download = 'SATABDI_SATYAPRAGNYA_SWAIN_Resume.pdf';
     link.click();
   }
