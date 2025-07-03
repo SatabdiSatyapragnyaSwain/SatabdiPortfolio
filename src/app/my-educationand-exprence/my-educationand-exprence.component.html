@@ -1,0 +1,41 @@
+<div class="container-fluid myEduExp" #myEduExp>
+    <div class="container">
+        <h2 class="journey-title">Professional Journey</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item" *ngFor="let exp of experience; let i = index" [attr.data-index]="i">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>{{ exp.period }}</h4>
+                            <h5>{{ exp.title }}</h5>
+                            <div class="card">
+                                <div class="side-border"></div>
+                                <strong>{{ exp.company }}</strong>
+                                <p>{{ exp.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item" *ngFor="let edu of education; let i = index" [attr.data-index]="i">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h4>{{ edu.period }}</h4>
+                            <h5>{{ edu.degree }}</h5>
+                            <div class="card">
+                                <div class="side-border"></div>
+                                <strong>{{ edu.institution }}</strong>
+                                <p>{{ edu.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

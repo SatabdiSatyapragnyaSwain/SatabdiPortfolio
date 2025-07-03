@@ -1,0 +1,229 @@
+.myEduExp {
+    padding: 30px 30px;
+    user-select: none;
+    /* background: radial-gradient(circle at top, #1b1b1b, #070707 70%); */
+    background-color: #00030e;
+}
+
+.journey-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background-color: #a18c02;
+    transition: height 1.5s ease-in-out;
+}
+
+.myEduExp.animate .timeline::before {
+    height: 100%;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 20px;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.myEduExp.animate .timeline-item {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.myEduExp.animate .timeline-item[data-index="0"] {
+    transition-delay: 0.2s;
+}
+
+.myEduExp.animate .timeline-item[data-index="1"] {
+    transition-delay: 0.4s;
+}
+
+.myEduExp.animate .timeline-item[data-index="2"] {
+    transition-delay: 0.6s;
+}
+
+.myEduExp.animate .timeline-item[data-index="3"] {
+    transition-delay: 0.8s;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -25px;
+    width: 14px;
+    height: 14px;
+    background-color: #ffdd00;
+    border-radius: 50%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.myEduExp.animate .timeline-dot {
+    opacity: 1;
+    transition-delay: inherit;
+}
+
+.timeline-content h4 {
+    margin: 0;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 20px;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+}
+
+.timeline-content h5 {
+    margin-top: 4px;
+    font-size: 18px;
+    color: #ffdd00;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.card {
+    background: #232d3d;
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: #ffdd00;
+    transition: width 0.5s ease;
+}
+
+.card::before {
+    top: 0;
+    left: 25%;
+}
+
+.card::after {
+    bottom: 0;
+    right: 25%;
+}
+
+.card .side-border::before,
+.card .side-border::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 0;
+    background-color: #ffdd00;
+    transition: height 0.5s ease;
+}
+
+.card .side-border::before {
+    left: 0;
+    top: 25%;
+}
+
+.card .side-border::after {
+    right: 0;
+    bottom: 25%;
+}
+
+.card:hover::before,
+.card:hover::after {
+    width: 50%;
+}
+
+.card:hover .side-border::before,
+.card:hover .side-border::after {
+    height: 50%;
+}
+
+.card strong {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    color:#ffdd00;
+}
+
+.card p {
+    font-size: 14px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .timeline::before {
+        transition: height 1.2s ease-in-out;
+    }
+
+    .timeline-item {
+        margin-bottom: 30px;
+        transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    }
+
+    .timeline-content h4 {
+        font-size: 18px;
+    }
+
+    .timeline-content h5 {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 12px;
+    }
+
+    .card strong {
+        font-size: 14px;
+    }
+
+    .card p {
+        font-size: 13px;
+    }
+
+    .card::before,
+    .card::after {
+        width: 50%;
+    }
+
+    .card .side-border::before,
+    .card .side-border::after {
+        height: 50%;
+    }
+}

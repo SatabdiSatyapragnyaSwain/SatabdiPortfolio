@@ -1,0 +1,150 @@
+.projectDetails {
+    background-color: #00030e;
+    padding: 30px 30px;
+    user-select: none;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.highlighted-title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.project {
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s;
+    box-shadow: 0 0 20px #ffdd00;
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.project img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    opacity: 2;
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    background: #00030e;
+    width: 100%;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+
+.project:hover .project-info {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.project-info span {
+    display: block;
+    font-size: 0.85rem;
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.project-info h3 {
+    font-size: 1rem;
+    color: #fff;
+    margin: 0;
+    word-wrap: break-word;
+    text-align: center;
+    padding: 0 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+@media (max-width: 768px) {
+    .project {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.projectDetails.animate .project {
+    opacity: 0;
+    animation: fadeInUp 0.6s forwards;
+}
+
+.projectDetails.animate .project:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.projectDetails.animate .project:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.projectDetails.animate .project:nth-child(3) {
+    animation-delay: 0.8s;
+}
+
+.projectDetails.animate .project:nth-child(4) {
+    animation-delay: 1.2s;
+}
+
+.projectDetails.animate .project:nth-child(5) {
+    animation-delay: 1.6s;
+}
+
+.projectDetails.animate .project:nth-child(6) {
+    animation-delay: 2s;
+}
+
+.projectDetails.animate .project:nth-child(7) {
+    animation-delay: 2.4s;
+}
+
+.projectDetails.animate .project:nth-child(8) {
+    animation-delay: 2.8s;
+}

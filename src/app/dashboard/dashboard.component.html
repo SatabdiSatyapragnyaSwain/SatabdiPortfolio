@@ -1,0 +1,84 @@
+<div class="main-content">
+    <!-- NavBar Starts -->
+    <nav class="navbar" [class.scrolled]="isScrolled">
+        <img src="assets/logo3.png" alt="Logo" class="logo" />
+        <ul class="nav-links">
+            <li>
+                <a href="mailto:swainsatabdi20@gmail.com" class="social-icon">
+                    <img src="assets/SocialMedia/email.png" alt="Email" />
+                </a>
+                <!-- <a href="mailto:swainsatabdi20@gmail.com?subject=Hello&body=I would like to connect with you."
+                    class="social-icon">
+                    <img src="assets/SocialMedia/email.png" alt="Email" />
+                </a> -->
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/satabdi-satyapragnya-swain-ab6075230" class="social-icon">
+                    <img src="assets/SocialMedia/linkedin.png" alt="LinkedIn" />
+                </a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/satabdisatyaprangya.swain" class="social-icon">
+                    <img src="assets/SocialMedia/facebook.png" alt="Facebook" />
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/__satabd_i/" class="social-icon">
+                    <img src="assets/SocialMedia/instagram.png" alt="Instagram" />
+                </a>
+            </li>
+            <li>
+                <a href="https://wa.me/9348136969" target="_blank" class="social-icon">
+                    <img src="assets/SocialMedia/whatsapp.png" alt="WhatsApp" />
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/SatabdiSatyapragnyaSwain" class="social-icon">
+                    <img src="assets/SocialMedia/github.png" alt="Github" />
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- NavBar Ends -->
+
+    <!-- Image-container Starts -->
+    <div class="image-container" [class.scrolled]="isScrollToTopVisible">
+        <p class="image">
+            <img src="assets/HyGif.gif" alt="Chat" class="imageImg" />
+        </p>
+    </div>
+    <!-- Image-container Ends -->
+
+    <!-- Water Starts -->
+    <div class="scrollToTop" [style.display]="isScrollToTopVisible ? 'block' : 'none'" (click)="scrollToTop()">
+        <div class="water" [style.height.%]="scrollPercentage"></div>
+        <span><i class="bi bi-chevron-up"></i></span>
+    </div>
+    <!-- Water Ends -->
+
+    <!-- Main Container Starts -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="name">Satabdi Satyapragnya Swain</p>
+                <h2 class="description">DOT NET FULL STACK DEVELOPER</h2>
+                <p class="aboutmyself">Passionate about turning ideas into reliable digital solutions and turning
+                    business ideas into powerful solutions with clean and scalable code using Angular, .NET, and SQL
+                    Server.</p>
+                <button (click)="downloadResume()">Download Resume <i class="bi bi-download"></i></button>
+            </div>
+            <div class="col-md-6">
+                <img src="assets/Coder2.png" alt="Coder" class="coderimage" />
+                <!-- <h2 class="title">DOT NET FULL STACK DEVELOPER</h2> -->
+            </div>
+        </div>
+    </div>
+    <!-- Main Container Starts -->
+</div>
+<app-who-am-i></app-who-am-i>
+<app-myabout></app-myabout>
+<app-myallprojectsdetails></app-myallprojectsdetails>
+<app-my-educationand-exprence></app-my-educationand-exprence>
+<app-myskillsimages></app-myskillsimages>
+<app-mycontactform></app-mycontactform>
+<app-footer></app-footer>

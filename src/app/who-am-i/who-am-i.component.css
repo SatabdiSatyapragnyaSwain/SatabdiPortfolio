@@ -1,0 +1,77 @@
+.whatIdo {
+    background-color: #00030e;
+    padding: 50px 30px;
+    user-select: none;
+}
+
+.col-md-3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mycontainer {
+    padding: 20px;
+    border: 3px solid #a18c02;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    opacity: 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transform: translateY(30px);
+}
+
+.mycontainer img {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.mycontainer h2 {
+    color: white;
+    margin: 10px 0 10px;
+    font-size: 25px;
+    font-weight: 700;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.mycontainer p {
+    color: white;
+    font-size: 15px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.whatIdo.animate .mycontainer {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.whatIdo.animate .col-md-3:nth-child(1) .mycontainer {
+    animation-delay: 0.5s;
+}
+
+.whatIdo.animate .col-md-3:nth-child(2) .mycontainer {
+    animation-delay: 1s;
+}
+
+.whatIdo.animate .col-md-3:nth-child(3) .mycontainer {
+    animation-delay: 1.5s;
+}
+
+.whatIdo.animate .col-md-3:nth-child(4) .mycontainer {
+    animation-delay: 2s;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
